@@ -10,42 +10,72 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-}
-
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.country-list {
-  list-style: none;  
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 60px;
 }
 
 img {
-  margin-right: 10px;
-  margin-left: 30px;
-}
-
-svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.country-info-title {
-  display: inline;
+button {
+  display: block;
 }
 
-p {
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+
+button {
+  display: flex;
+  font-size: 16px;
+  line-height: 1.88;
   font-weight: 700;
-  margin-left: 30px;
+  letter-spacing: 0.06em;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  color: blue;
+  background-color: rgb(247, 243, 44);
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  margin-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition-property: background-color, color, border;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
 }
 
-span {
-  font-weight: 400;
-  margin-left: 10px;
+button.is-hidden {
+  display: none;
 }
+
+button:hover {
+  color: rgb(247, 243, 44);
+  background-color: blue;
+  border: 1px solid rgb(9, 9, 51);
+  animation: animate125 2000ms infinite 10ms;
+}
+
+.input-search {
+  width: 50%;
+  height: 40px;
+  border-radius: 4px;
+  padding: 2px 10px;
+  margin-right: 20px;
+}
+
