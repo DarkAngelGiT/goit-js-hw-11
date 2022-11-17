@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://DarkAngelGiT.github.io/goit-js-hw-11",
   "scripts": {
-    "dev": "parcel src/*.html",
+    "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
   },
   "repository": {
@@ -33,11 +33,9 @@
     "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4",
-    "process": "^0.11.10"
+    "posthtml-include": "^1.7.4"
+   
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "alias": {
-    "process": false
-  }
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+
 }

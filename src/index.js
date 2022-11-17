@@ -8,11 +8,11 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-const fetchImagesService = new FetchImagesService();
 const loadMoreBtn = new LoadMoreBtn({ selektor: '.load-more', hidden: true });
 const lightbox = new SimpleLightbox('.gallery a', { captionDelay
-    : 250,
+  : 250,
 });
+const fetchImagesService = new FetchImagesService();
 
 
 function onSearch(e) {
@@ -74,5 +74,5 @@ function onPageScrolling(){
         });
 }
 
-refs.formSearch.addEventListener('submit', onSearch);
+refs.formSearch.addEventListener('submit', onSearch());
 loadMoreBtn.refs.button.addEventListener('click', fetchImages);
