@@ -1,11 +1,12 @@
 import './css/styles.css';
-import { refs } from './js/getRefs';
-import { makeImageMarkup } from './js/markupService';
 import { FetchImagesService } from './js/fetchImagesService';
+import { refs } from './js/getRefs';
 import { LoadMoreBtn } from './js/load-more-btn';
+import { makeImageMarkup } from './js/markupService';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
+
 
 const fetchImagesService = new FetchImagesService();
 const loadMoreBtn = new LoadMoreBtn({ selektor: '.load-more', hidden: true });
@@ -14,10 +15,10 @@ const lightbox = new SimpleLightbox('.gallery a', { captionDelay
 });
 
 
-function onSearch(event) {
-    event.preventDefault();
+function onSearch(e) {
+    e.preventDefault();
 
-    const currentWord = event.currentTarget.elements.searchQuery.value.trim();
+    const currentWord = e.currentTarget.elements.searchQuery.value.trim();
     if (currentWord === '') {
         return Notify.info(`Enter a word to search for images.`);
     }
